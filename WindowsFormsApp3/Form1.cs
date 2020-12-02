@@ -24,7 +24,7 @@ namespace WindowsFormsApp3
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            try
+            try// the try/catch command is there to give an error message if the code is being used incorrectly 
             {
 
             
@@ -36,7 +36,7 @@ namespace WindowsFormsApp3
             }
             catch
             {
-                MessageBox.Show("there has been an error");
+                MessageBox.Show("there has been an error");//displays an error message to the user 
             }
         }
 
@@ -57,13 +57,21 @@ namespace WindowsFormsApp3
 
         private void Button2_Click(object sender, EventArgs e)
         {
-            double width = double.Parse(textBox2.Text);//this is where the user will input the width 
-            double length = double.Parse(textBox1.Text);//this is where the user will input the length 
-            double height = double.Parse(textBox3.Text);//this is where the user will input the height 
-            double volume = length * width * height;// this does the calculation for volume 
-            label4.Text = "volume = " + volume;// thi shows the computer where to input the answer. 
+            try
+            {
 
 
+                double width = double.Parse(textBox2.Text);//this is where the user will input the width 
+                double length = double.Parse(textBox1.Text);//this is where the user will input the length 
+                double height = double.Parse(textBox3.Text);//this is where the user will input the height 
+                double volume = length * width * height;// this does the calculation for volume 
+                label4.Text = "volume = " + volume;// thi shows the computer where to input the answer. 
+
+            }
+            catch
+            {
+                MessageBox.Show("there was an error");
+            }
                 
         }
 
@@ -94,24 +102,48 @@ namespace WindowsFormsApp3
 
         private void Button3_Click(object sender, EventArgs e)
         {
-            double radius = double.Parse(textBox4.Text);//this is where the user will input the radius
-            double surface_area = 4 * 3.14159 * radius * radius;// this is where the users inputs will be calculated to solve the surface area 
-            label6.Text = "surface area  = " + surface_area;
+            try
+            {
 
+
+                double radius = double.Parse(textBox4.Text);//this is where the user will input the radius
+                double surface_area = 4 * 3.14159 * radius * radius;// this is where the users inputs will be calculated to solve the surface area 
+                label6.Text = "surface area  = " + surface_area;//this shows the computer where to show the answer 
+            }
+            catch
+            {
+                MessageBox.Show("there was an error");
+            }
         }
 
         private void Button4_Click(object sender, EventArgs e)
-        {
-            double radius = double.Parse(textBox4.Text);//this is where the user will input the radius
-            double volume = 4 * 3.14159 * radius * radius * radius / 3.0;
-            label7.Text = "volume =" + volume;
+        { try
+            {
+
+
+                double radius = double.Parse(textBox4.Text);//this is where the user will input the radius
+                double volume = 4 * 3.14159 * radius * radius * radius / 3.0;
+                label7.Text = "volume =" + volume;
+            }
+            catch
+            {
+                MessageBox.Show("there was an error");
+            }
         }
 
         private void Button5_Click(object sender, EventArgs e)
         {
-            double radius = double.Parse(textBox5.Text);//this is where the user will input the radius
-            double volume = 1 * 3.14159 * radius * radius / 3.0;//this is where the computer will calculate the volume by using the given user inputs.
-            label11.Text = "volume =" + volume;//this tells the computer where to display the answer.
+            try
+            {
+                double radius = double.Parse(textBox5.Text);//this is where the user will input the radius
+                double volume = 1 * 3.14159 * radius * radius / 3.0;//this is where the computer will calculate the volume by using the given user inputs.
+                label11.Text = "volume =" + volume;//this tells the computer where to display the answer.
+            }
+            catch
+            {
+                MessageBox.Show("there was an error");
+            }
+            
         }
 
         private void TextBox5_TextChanged(object sender, EventArgs e)
@@ -131,10 +163,18 @@ namespace WindowsFormsApp3
 
         private void Button6_Click(object sender, EventArgs e)
         {
-            double radius = double.Parse(textBox5.Text);//this is where the user will input the radius
-            double height = double.Parse(textBox6.Text);//this is where the user will input the height
-            double surface_area = 3.141519 * radius*(radius + Math.Sqrt(height * height + radius * radius));//this is where the computer will calculate the suface area with the units given to it by the user
-            label12.Text = "surface area =" + surface_area;// this tells the computer where to display the answer to the question
+            try
+            {
+                double radius = double.Parse(textBox5.Text);//this is where the user will input the radius
+                double height = double.Parse(textBox6.Text);//this is where the user will input the height
+                double surface_area = 3.141519 * radius * (radius + Math.Sqrt(height * height + radius * radius));//this is where the computer will calculate the suface area with the units given to it by the user
+                label12.Text = "surface area =" + surface_area;// this tells the computer where to display the answer to the question
+            }
+            catch
+            {
+                MessageBox.Show("there was an error");
+            }
+            
         }
     }
 }
