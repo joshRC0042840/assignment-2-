@@ -32,7 +32,7 @@ namespace WindowsFormsApp3
             double length = double.Parse(textBox1.Text);//this is where the user will input the length 
             double height = double.Parse(textBox3.Text);//this is where the user will input the height 
             double area = 2 * (length * width + length * height + width * height);// this piece of cod edoes the calculation for area for the intergers you put in
-            label5.Text = "area = " + area;//this tells the computer where to display the answer.
+            label5.Text = "area = " + area + " cm2";//this tells the computer where to display the answer with correct units 
             }
             catch
             {
@@ -65,7 +65,7 @@ namespace WindowsFormsApp3
                 double length = double.Parse(textBox1.Text);//this is where the user will input the length 
                 double height = double.Parse(textBox3.Text);//this is where the user will input the height 
                 double volume = length * width * height;// this does the calculation for volume 
-                label4.Text = "volume = " + volume;// thi shows the computer where to input the answer. 
+                label4.Text = "volume = " + volume + " cm3";// thi shows the computer where to input the answer with correct units 
 
             }
             catch
@@ -108,7 +108,7 @@ namespace WindowsFormsApp3
 
                 double radius = double.Parse(textBox4.Text);//this is where the user will input the radius
                 double surface_area = 4 * 3.14159 * radius * radius;// this is where the users inputs will be calculated to solve the surface area 
-                label6.Text = "surface area  = " + surface_area;//this shows the computer where to show the answer 
+                label6.Text = "surface area  = " + surface_area + "cm2";//this shows the computer where to show the answer eith correct units 
             }
             catch
             {
@@ -123,7 +123,7 @@ namespace WindowsFormsApp3
 
                 double radius = double.Parse(textBox4.Text);//this is where the user will input the radius
                 double volume = 4 * 3.14159 * radius * radius * radius / 3.0;
-                label7.Text = "volume =" + volume;
+                label7.Text = "volume =" + volume + "cm3";
             }
             catch
             {
@@ -135,9 +135,10 @@ namespace WindowsFormsApp3
         {
             try
             {
-                double radius = double.Parse(textBox5.Text);//this is where the user will input the radius
-                double volume = 1 * 3.14159 * radius * radius / 3.0;//this is where the computer will calculate the volume by using the given user inputs.
-                label11.Text = "volume =" + volume;//this tells the computer where to display the answer.
+                double radius = double.Parse(textBox5.Text);
+                double height = double.Parse(textBox6.Text);//this is where the user will input the radius
+                double volume = 1.0 / 3.0 * 3.14159 * radius * radius*height;//this is where the computer will calculate the volume by using the given user inputs.
+                label11.Text = "volume =" + volume + "cm3";//this tells the computer where to display the answer with the correct units 
             }
             catch
             {
@@ -168,7 +169,7 @@ namespace WindowsFormsApp3
                 double radius = double.Parse(textBox5.Text);//this is where the user will input the radius
                 double height = double.Parse(textBox6.Text);//this is where the user will input the height
                 double surface_area = 3.141519 * radius * (radius + Math.Sqrt(height * height + radius * radius));//this is where the computer will calculate the suface area with the units given to it by the user
-                label12.Text = "surface area =" + surface_area;// this tells the computer where to display the answer to the question
+                label12.Text = "surface area =" + surface_area + "cm2";// this tells the computer where to display the answer to the question with the correct units 
             }
             catch
             {
