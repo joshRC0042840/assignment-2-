@@ -24,13 +24,20 @@ namespace WindowsFormsApp3
 
         private void Button1_Click(object sender, EventArgs e)
         {
+            try
+            {
+
+            
             double width = double.Parse(textBox2.Text);//this is where the user will input the width
             double length = double.Parse(textBox1.Text);//this is where the user will input the length 
-            double height  = double.Parse(textBox3.Text);//this is where the user will input the height 
+            double height = double.Parse(textBox3.Text);//this is where the user will input the height 
             double area = 2 * (length * width + length * height + width * height);// this piece of cod edoes the calculation for area for the intergers you put in
             label5.Text = "area = " + area;//this tells the computer where to display the answer.
-
-
+            }
+            catch
+            {
+                MessageBox.Show("there has been an error");
+            }
         }
 
         private void Label5_Click(object sender, EventArgs e)
@@ -53,8 +60,8 @@ namespace WindowsFormsApp3
             double width = double.Parse(textBox2.Text);//this is where the user will input the width 
             double length = double.Parse(textBox1.Text);//this is where the user will input the length 
             double height = double.Parse(textBox3.Text);//this is where the user will input the height 
-            double volume = length * width * height;
-            label4.Text = "volume = " + volume;
+            double volume = length * width * height;// this does the calculation for volume 
+            label4.Text = "volume = " + volume;// thi shows the computer where to input the answer. 
 
 
                 
@@ -88,7 +95,7 @@ namespace WindowsFormsApp3
         private void Button3_Click(object sender, EventArgs e)
         {
             double radius = double.Parse(textBox4.Text);//this is where the user will input the radius
-            double surface_area = 4 * 3.14159 * radius * radius;
+            double surface_area = 4 * 3.14159 * radius * radius;// this is where the users inputs will be calculated to solve the surface area 
             label6.Text = "surface area  = " + surface_area;
 
         }
@@ -127,7 +134,7 @@ namespace WindowsFormsApp3
             double radius = double.Parse(textBox5.Text);//this is where the user will input the radius
             double height = double.Parse(textBox6.Text);//this is where the user will input the height
             double surface_area = 3.141519 * radius*(radius + Math.Sqrt(height * height + radius * radius));//this is where the computer will calculate the suface area with the units given to it by the user
-            label12.Text = "surface area =" + surface_area;
+            label12.Text = "surface area =" + surface_area;// this tells the computer where to display the answer to the question
         }
     }
 }
